@@ -5,11 +5,11 @@ import pathlib
 path = str(pathlib.Path(__file__).parent.resolve()) + '\\skripts'
 
 f = []
-while(True):
-    for (dirpath, dirnames, filenames) in walk(path):
-        f.extend(filenames)
-        break
+for (dirpath, dirnames, filenames) in walk(path):
+    f.extend(filenames)
+    break
 
+while(True):
     key = 0
     dictionary = {}
     for skript in f:
@@ -22,5 +22,5 @@ while(True):
 
     os.system(path + '\\' + skript)
 
-    print('Thank chuuuu~ ^~^')
+    print('\n--------------------------------\n Thank chuuuu~ ^~^ \n--------------------------------\n')
     
