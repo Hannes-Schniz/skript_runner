@@ -17,10 +17,12 @@ while(True):
         dictionary.update(b)
         print('for: ' + skript + ' type ' + str(key) + '\n')
         key = key + 1
+    
+    print(dictionary)
 
     run_skript = input("choose skript to run: ")
 
-    os.system(path + '\\' + skript)
+    os.system(path + '\\' + run_skript)
 
     print('\n--------------------------------\n Thank chuuuu~ ^~^ \n--------------------------------\n')
     

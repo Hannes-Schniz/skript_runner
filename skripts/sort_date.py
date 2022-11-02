@@ -21,6 +21,6 @@ for name in f:
     if not (os.path.exists(full_path)):
         os.mkdir(full_path, 0o666)
     shutil.move(path + '\\' + name, full_path + '\\' + name)
-    print('moved: ' + name + '   to: ' + str(time))
+    print('"' + name + '"->' + str(time))
     sleep(0.5)
 
