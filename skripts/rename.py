@@ -1,11 +1,9 @@
 import os
 from os import walk
-from tokenize import String
+from time import sleep
 
-print("skript running")
-
-path = input("please enter path: ")
-new_name = input("input what to replace to: ")
+path = input("path: ")
+new_name = input("name: ")
 
 f = []
 for (dirpath, dirnames, filenames) in walk(path):
@@ -19,3 +17,4 @@ for name in f:
     full_new_path = path + '//' + new_name + '_' + str(counter) + '.' + name.split('.')[1]
     os.rename(full_old_path, full_new_path)
     counter = counter + 1 
+    sleep(0.5)
