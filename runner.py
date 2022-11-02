@@ -13,12 +13,12 @@ while(True):
     key = 0
     dictionary = {}
     for skript in f:
-        b = {skript : key}
+        b = {str(key) : skript}
         dictionary.update(b)
         print('for: ' + skript + ' type ' + str(key) + '\n')
         key = key + 1
-
-    run_skript = input("choose skript to run: ")
+        
+    run_skript = dictionary[input("choose skript to run: ")]
 
     os.system(path + '\\' + run_skript)
 
