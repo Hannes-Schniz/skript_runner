@@ -15,7 +15,7 @@ while(True):
     for skript in f:
         b = {str(key) : skript}
         dictionary.update(b)
-        print('for: ' + skript + ' type ' + str(key) + '\n')
+        print(skript + ' -> ' + str(key) + '\n')
         key = key + 1
         
     run_skript = dictionary[input("choose skript to run: ")]
