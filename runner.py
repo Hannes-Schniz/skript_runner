@@ -4,10 +4,17 @@ import pathlib
 
 path = ''
 
+slashes = ''
+
+foreword = ''
+
 if (os.name == 'nt'):
     path = str(pathlib.Path(__file__).parent.resolve()) + '\\skripts\\windows'
+    slashes = '\\'
 elif (os.name == 'posix'):
     path = os.getcwd() + '/skripts/unix'
+    slashes = '/'
+    foreword = 'python3 '
 else:
     print('OS not supported')
     exit
@@ -28,6 +35,6 @@ while (True):
 
     run_skript = dictionary[input("choose skript to run: ")]
 
-    os.system(path + '\\' + run_skript)
+    os.system(foreword + path + slashes + run_skript)
 
     print('\n--------------------------------\n Thank chuuuu~ ^~^ \n--------------------------------\n')
